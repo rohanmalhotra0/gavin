@@ -14,21 +14,20 @@ html {
 
 body {
   overflow-x: hidden;
-  background: #0f172a;
+  background: rgb(238, 174, 202);
   background: radial-gradient(
-    ellipse at top,
-    #1e3a5f 0%,
-    #0f172a 50%,
-    #020617 100%
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
   );
 }
 /*custom scrollbar*/
 ::-webkit-scrollbar {
   width: 6px;
-  background: #1e293b;
+  background: #acb7e1;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1a365d;
+  background: #4577af;
   border-radius: 10px;
 }
 .flex-row {
@@ -1633,4 +1632,98 @@ footer ul li a.active {
 #button-top.show {
   opacity: 1;
   visibility: visible;
+}
+
+/* Honors View Certification button */
+.honor-view-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1a365d;
+  background: rgba(26, 54, 93, 0.1);
+  border: 1px solid rgba(26, 54, 93, 0.3);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-family: inherit;
+}
+
+.honor-view-btn:hover {
+  background: rgba(26, 54, 93, 0.2);
+  border-color: rgba(26, 54, 93, 0.5);
+}
+
+/* Certification modal */
+.cert-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.cert-modal-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cert-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.cert-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cert-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #666;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.cert-modal-close:hover {
+  color: #000;
+}
+
+.cert-modal-title {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #1a365d;
+}
+
+.cert-modal-img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
 }

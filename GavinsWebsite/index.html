@@ -64,7 +64,7 @@
               <span class="low-highlight-pink">What I Do</span>
             </h2>
             <h3 style="font-size: 24px; color: #444444; font-weight: 1">
-              I bridge equity research, financial analysis, and consulting—turning data into actionable insights.
+              I bridge equity research, financial analysis, and consulting, turning data into actionable insights.
             </h3>
             <div class="dev-icons">
               <ul>
@@ -141,7 +141,7 @@
               <h5>The Pennsylvania State University</h5>
               <p>Intended B.S. in Finance</p>
               <p>Aug 2024 – May 2025 | University Park, PA</p>
-              <p>Division of Undergraduate Studies. Member of Penn State Investment Association (PSIA)—participated in weekly sessions on financial modeling, equity research, and investment analysis.</p>
+              <p>Division of Undergraduate Studies. Member of Penn State Investment Association (PSIA), participated in weekly sessions on financial modeling, equity research, and investment analysis.</p>
             </div>
           </div>
         </div>
@@ -164,7 +164,7 @@
               <h5 class="experience-text-role">Research Analyst Intern (Summer 2026)</h5>
               <h5 class="experience-text-date">Aug 2025 – Present · New York, NY</h5>
               <p class="subTitle experience-text-desc">
-                Digital Infrastructure / Datacenter Sector Coverage. Return offer from Summer 2025. Supporting U.S. tower research (AMT, CCI, SBAC)—earnings/filings review, KPI updates, internal model work, sensitivity analysis. Building scenario frameworks around churn, escalators, and leasing activity.
+                Digital Infrastructure / Datacenter Sector Coverage. Return offer from Summer 2025. Supporting U.S. tower research (AMT, CCI, SBAC), earnings/filings review, KPI updates, internal model work, sensitivity analysis. Building scenario frameworks around churn, escalators, and leasing activity.
               </p>
             </div>
           </div>
@@ -181,7 +181,7 @@
               <h5 class="experience-text-role">Building Entrepreneurial Leaders (BEL) Program</h5>
               <h5 class="experience-text-date">Feb 2026 · New York, NY</h5>
               <p class="subTitle experience-text-desc">
-                Attended Bain's BEL program at the NYC office. Heard real case stories from consultants and partners, participated in casing workshop. Great intro to consulting culture and the work—met great people and left even more excited about consulting.
+                Attended Bain's BEL program at the NYC office. Heard real case stories from consultants and partners, participated in casing workshop. Great intro to consulting culture and the work, met great people and left even more excited about consulting.
               </p>
             </div>
           </div>
@@ -220,22 +220,6 @@
                   </p>
                 </div>
               </div>
-              <div class="experience-card" data-aos="fade-right" data-aos-duration="2500">
-                <div class="experience-banner" style="background: #444941">
-                  <div class="experience-blurred_div"></div>
-                  <div class="experience-div-company">
-                    <span class="experience-text-company">UVA Finance Academy</span>
-                  </div>
-                  <img crossorigin="anonymous" class="experience-roundedimg" src="https://ui-avatars.com/api/?name=UVA+Finance&size=120&background=fff&color=444941" alt="UVA Finance Academy" />
-                </div>
-                <div class="experience-text-details">
-                  <h5 class="experience-text-role">Participant (Networking Trek Selectee)</h5>
-                  <h5 class="experience-text-date">Sep 2025 – Nov 2025 · Charlottesville, VA</h5>
-                  <p class="subTitle experience-text-desc">
-                    Selected for competitive 7-week program covering valuation, capital markets, portfolio construction. DCF, WACC, trading comps case assignments; CAPM and beta concepts; capital structure and rate impacts.
-                  </p>
-                </div>
-              </div>
             </div>
             <button type="button" class="expand-toggle" data-expand-target="experience-more" aria-expanded="false">
               <span class="expand-label">View more experience</span>
@@ -256,6 +240,7 @@
             <div class="project-card-content" style="text-align: center;">
               <h5 class="project-card-title">HSF Scholar</h5>
               <p class="project-card-desc">Hispanic Scholarship Fund Scholar · Issued by HSF · Dec 2024</p>
+              <button type="button" class="honor-view-btn" data-cert-src="./assets/Gavin/hsf-scholar.png" data-cert-title="HSF Scholar">View Certification</button>
             </div>
           </div>
           <div class="project-card" style="flex: 1 1 100%;">
@@ -265,7 +250,18 @@
             <div class="project-card-content" style="text-align: center;">
               <h5 class="project-card-title">National Recognition Awardee</h5>
               <p class="project-card-desc">CollegeBoard · Aug 2023</p>
+              <button type="button" class="honor-view-btn" data-cert-src="./assets/Gavin/national-recognition-awardee.jpeg" data-cert-title="National Recognition Awardee">View Certification</button>
             </div>
+          </div>
+        </div>
+
+        <!-- Certification Modal -->
+        <div id="cert-modal" class="cert-modal" aria-hidden="true">
+          <div class="cert-modal-backdrop"></div>
+          <div class="cert-modal-content">
+            <button type="button" class="cert-modal-close" aria-label="Close">&times;</button>
+            <h4 class="cert-modal-title"></h4>
+            <img class="cert-modal-img" src="" alt="" />
           </div>
         </div>
 
@@ -274,20 +270,13 @@
           <h2 class="contact-section-title">
             <span class="low-highlight-hazeskin">Contact</span>
           </h2>
-          <p class="contact-section-subtitle">Let's connect—reach out for opportunities, collaborations, or just to say hi.</p>
+          <p class="contact-section-subtitle">Let's connect, reach out for opportunities, collaborations, or just to say hi.</p>
           <div class="contact-card">
             <div class="contact-item">
               <i class="fas fa-map-marker-alt contact-icon"></i>
               <div>
                 <span class="contact-label">Location</span>
                 <a href="https://maps.google.com/?q=Charlottesville,+VA" target="_blank" rel="noopener noreferrer">Charlottesville, VA</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone contact-icon"></i>
-              <div>
-                <span class="contact-label">Phone</span>
-                <a href="tel:9739081736">973-908-1736</a>
               </div>
             </div>
             <div class="contact-item">
@@ -331,7 +320,7 @@
         scrolBtn.style.display = offset > 300 ? "block" : "none";
       });
 
-      document.addEventListener('DOMContentLoaded', function() {
+      function initExpandToggle() {
         document.querySelectorAll('.expand-toggle').forEach(function(btn) {
           btn.addEventListener('click', function() {
             var id = this.getAttribute('data-expand-target');
@@ -342,12 +331,14 @@
             var isHidden = el.classList.contains('expandable-hidden');
             if (isHidden) {
               el.classList.remove('expandable-hidden');
+              el.style.display = '';
               this.setAttribute('aria-expanded', 'true');
               icon.classList.remove('fa-chevron-down');
               icon.classList.add('fa-chevron-up');
               label.textContent = 'View less';
             } else {
               el.classList.add('expandable-hidden');
+              el.style.display = 'none';
               this.setAttribute('aria-expanded', 'false');
               icon.classList.remove('fa-chevron-up');
               icon.classList.add('fa-chevron-down');
@@ -355,7 +346,12 @@
             }
           });
         });
-      });
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initExpandToggle);
+      } else {
+        initExpandToggle();
+      }
 
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
@@ -365,6 +361,31 @@
           var target = document.querySelector(href);
           if (target) target.scrollIntoView({ behavior: "smooth", block: "center" });
         });
+      });
+
+      // Certification modal
+      var modal = document.getElementById('cert-modal');
+      var modalImg = modal.querySelector('.cert-modal-img');
+      var modalTitle = modal.querySelector('.cert-modal-title');
+      document.querySelectorAll('.honor-view-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          modalImg.src = this.getAttribute('data-cert-src');
+          modalImg.alt = this.getAttribute('data-cert-title');
+          modalTitle.textContent = this.getAttribute('data-cert-title');
+          modal.classList.add('cert-modal-open');
+          modal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      function closeCertModal() {
+        modal.classList.remove('cert-modal-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+      modal.querySelector('.cert-modal-close').addEventListener('click', closeCertModal);
+      modal.querySelector('.cert-modal-backdrop').addEventListener('click', closeCertModal);
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('cert-modal-open')) closeCertModal();
       });
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
